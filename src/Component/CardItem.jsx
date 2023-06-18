@@ -35,17 +35,19 @@ function CardItem({ data, index }) {
             </label>
             <BsThreeDots />
           </div>
-          <h5 className="font-semibold	text-[18px] leading-6 text-[#0D062D] my-3">
+          <h5 className="font-semibold	text-[18px] leading-6 text-[#0D062D] my-2">
             {data?.title}
           </h5>
-          <p className="text-[#787486] font-normal	text-[12px] mb-5">
-            {data?.desc}
-          </p>
+          {data?.desc && (
+            <p className="text-[#787486] font-normal	text-[12px] mb-5">
+              {data?.desc}
+            </p>
+          )}
           {data?.img && (
             <img
               src={data?.img}
               alt={data?.img}
-              className="my-3 h-full w-full"
+              className="mb-3 h-full w-full"
             />
           )}
           <div>

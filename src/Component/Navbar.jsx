@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-white border-[#DBDBDB] border-b md:px-4">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto xs:p-2 px-4 py-2">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-4 py-3.5">
           <form className="lg:w-[400px] xs:w-[100px]">
             <label
               htmlFor="default-search"
@@ -44,34 +44,14 @@ const Navbar = () => {
             </div>
           </form>
 
-          <div className="flex items-center md:order-2">
+          <div className="flex items-center">
             <div
-              className="items-center justify-between hidden w-full md:flex md:w-auto  mr-12"
+              className="items-center justify-between hidden w-full lg:flex md:w-auto mr-12 space-x-6"
               id="mobile-menu-2"
             >
-              <ul className="flex flex-col md:p-0  rounded-lg bg-gray-50 md:flex-row md:space-x-6 md:mt-0 md:border-0 md:bg-white ">
-                <li>
-                  <img
-                    src={Calender}
-                    alt="calender"
-                    className="w-5 h-5 text-gray-500 "
-                  />
-                </li>
-                <li>
-                  <img
-                    src={Message}
-                    alt="messgae"
-                    className="w-5 h-5 text-gray-500 "
-                  />
-                </li>
-                <li>
-                  <img
-                    src={Notifi}
-                    alt="notifications"
-                    className="w-5 h-5 text-gray-500 "
-                  />
-                </li>
-              </ul>
+              <img src={Calender} alt="calender" className="w-5 h-5" />
+              <img src={Message} alt="messgae" className="w-5 h-5" />
+              <img src={Notifi} alt="notifications" className="w-5 h-5" />
             </div>
             <div className="m-2">
               <p className="font-normal	text-base leading-5 text-right text-[#0D062D]">
@@ -123,20 +103,19 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <ul className="my-2 grid w-full gap-3 md:grid-cols-2 px-8">
-        <li className=" flex items-center m-2 justify-start gap-4 h-full">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-8 pt-7">
+        <div className=" flex items-center m-2 justify-start  gap-4 h-full">
           <p className="font-semibold text-2xl lg:text-[46px] leading-14 text-capitalize text-[#0D062D]">
             Mobile App
           </p>
           <img src={Arrowsquareup} alt="arrowsquareup" />
           <img src={Attach} alt="attach" />
-        </li>
-        <li className="flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start ">
+        </div>
+        <div className="flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start">
           <img src={Addsquare1} alt="attach" />
           <p className="font-medium text-base leading-5 capitalize text-purple-600">
             invite
           </p>
-
           <div className="flex -space-x-3">
             <img
               className="w-10 h-10 object-cover border-2 border-white rounded-full dark:border-gray-800"
@@ -165,11 +144,10 @@ const Navbar = () => {
               +2
             </a>
           </div>
-        </li>
-      </ul>
-
-      <ul className="my-2 mt-5 grid w-full gap-3 md:grid-cols-2 px-8">
-        <li className=" flex items-center m-2 justify-start gap-4 h-full">
+        </div>
+      </div>
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-8 pt-7">
+        <div className=" flex items-center m-2 justify-start gap-4 h-full">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
               <BiFilterAlt className="text-[#787486]" />
@@ -190,8 +168,8 @@ const Navbar = () => {
               <option>Today 3</option>
             </select>
           </div>
-        </li>
-        <li className="flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start ">
+        </div>
+        <div className="flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start ">
           <button
             type="button"
             className="text-[#787486] gap-3 bg-white border border-[#787486] focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 "
@@ -202,8 +180,8 @@ const Navbar = () => {
           <div className="border-l  border-[#787486] h-8"></div>
           <img src={Barbtn} alt="Barbtn" />
           <img src={Fourwheel} alt="Fourwheel" />
-        </li>
-      </ul>
+        </div>
+      </div>
     </>
   );
 };

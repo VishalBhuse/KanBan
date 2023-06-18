@@ -69,7 +69,7 @@ const Sidebar = () => {
       };
 
   return (
-    <div>
+    <div className="sticky top-0 z-[100] h-[100%]">
       <div
         onClick={() => setOpen(false)}
         className={`md:hidden fixed inset-0 z-[998] bg-black/50 ${
@@ -83,7 +83,7 @@ const Sidebar = () => {
         animate={open ? "open" : "closed"}
         className=" bg-white text-gray shadow-xl z-[999] max-w-[16rem] w-[16rem] overflow-hidden md:relative fixed"
       >
-        <div className="flex items-center justify-between gap-2.5 font-medium border-b pb-6 pt-5 border-[#DBDBDB]">
+        <div className="flex items-center justify-between gap-2.5 font-medium border-b h-[5rem] border-[#DBDBDB]">
           <div
             className={`flex items-center mx-5 gap-2.5 ${
               open ? "block" : "hidden"
@@ -183,28 +183,28 @@ const Sidebar = () => {
                       className="w-full mb-1 py-3 px-2 flex flex-row items-center gap-5"
                     >
                       <p className="bg-[#7AC555] rounded-full w-[8px] h-[8px]"></p>
-                      <p> Mobile App</p>
+                      <p className="text-[16px]"> Mobile App</p>
                     </NavLink>
                     <NavLink
                       to={"/website_redesign"}
                       className="w-full mb-1 py-3 px-2 flex flex-row  items-center gap-5 "
                     >
                       <p className="bg-[#FFA500] rounded-full w-[8px] h-[8px]"></p>
-                      <p> Website Redesign</p>
+                      <p className="text-[16px]"> Website Redesign</p>
                     </NavLink>
                     <NavLink
                       to={"/system"}
                       className="w-full mb-1 py-3 px-2 flex flex-row  items-center gap-5 "
                     >
                       <p className="bg-[#E4CCFD] rounded-full w-[8px] h-[8px]"></p>
-                      <p> Design System</p>
+                      <p className="text-[16px]"> Design System</p>
                     </NavLink>
                     <NavLink
                       to={"/wireframe"}
                       className="w-full mb-1 py-3 px-2 flex flex-row  items-center gap-5 "
                     >
                       <p className="bg-[#76A5EA] rounded-full w-[8px] h-[8px]"></p>
-                      <p> Wireframes</p>
+                      <p className="text-[16px]"> Wireframes</p>
                     </NavLink>
                   </ul>
                 </div>

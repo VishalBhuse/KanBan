@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <div className="p-5 flex flex-col lg:h-[115vh]  bg-white">
+    <div className="p-2 flex flex-col lg:h-[110vh] md:mx-8 bg-white">
       {ready && (
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-5 my-5 ">
@@ -43,7 +43,7 @@ const Home = () => {
                   {(provided, snapshot) => (
                     <div {...provided.droppableProps} ref={provided.innerRef}>
                       <div
-                        className={`bg-[#F5F5F5] rounded-t-lg shadow-md h-[108vh]
+                        className={`bg-[#F5F5F5] rounded-t-lg shadow-md h-[105vh]
                         flex flex-col relative overflow-hidden pb-3 px-2 
                         ${snapshot.isDraggingOver && "bg-green-100"}`}
                       >
