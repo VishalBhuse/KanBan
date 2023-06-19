@@ -145,7 +145,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-8 pt-7">
         <div className=" flex items-center m-2 justify-start gap-4 h-full">
           <div class="dropdown inline-block relative">
-            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <BiFilterAlt className="text-[#787486] mr-2" />
               <span class="mr-1">Filter</span>
               <svg
@@ -158,7 +158,7 @@ const Navbar = () => {
             </button>
           </div>
           <div class="dropdown inline-block relative">
-            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <img src={Calenderdark} alt="Calenderdark" className="mr-2" />
               <span class="mr-1">Today</span>
               <svg
@@ -171,7 +171,7 @@ const Navbar = () => {
             </button>
           </div>
           <div class="dropdown inline-block relative md:hidden">
-            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <img src={Profileuser} alt="Profileuser" className="mr-2" />
               <span class="mr-1">Share</span>
               <svg
@@ -185,13 +185,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="md:flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start hidden ">
-          <button
-            type="button"
-            className="text-[#787486] gap-3 bg-white border border-[#787486] focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 "
-          >
-            <img src={Profileuser} alt="Profileuser" />
-            Share
-          </button>
+          <div class="dropdown inline-block relative ">
+            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+              <img src={Profileuser} alt="Profileuser" className="mr-2" />
+              <span class="mr-1">Share</span>
+            </button>
+          </div>
           <div className="border-l  border-[#787486] h-8"></div>
           <img src={Barbtn} alt="Barbtn" />
           <img src={Fourwheel} alt="Fourwheel" />
