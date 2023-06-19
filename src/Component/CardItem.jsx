@@ -44,11 +44,13 @@ function CardItem({ data, index }) {
             </p>
           )}
           {data?.img && (
-            <img
-              src={data?.img}
-              alt={data?.img}
-              className="mb-3 h-full w-full"
-            />
+            <div className="h-32 overflow-hidden mb-2 rounded-[6px]">
+              <img
+                src={data?.img}
+                alt={data?.img}
+                className="object-cover h-full w-full"
+              />
+            </div>
           )}
           <div>
             <ul className="flex space-x-3 justify-between">

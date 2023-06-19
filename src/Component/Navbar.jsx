@@ -21,13 +21,12 @@ const Navbar = () => {
       <nav className="bg-white border-[#DBDBDB] border-b md:px-4">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-4 py-3.5">
           <form className="lg:w-[400px] xs:w-[100px]">
-            <label
-              htmlFor="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only "
-            >
-              Search
-            </label>
-            <div className="relative">
+            <img
+              src={Search}
+              alt="search"
+              className="w-5 h-5 text-gray-500 block md:hidden "
+            />
+            <div className="relative hidden md:block">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <img
                   src={Search}
@@ -45,15 +44,12 @@ const Navbar = () => {
           </form>
 
           <div className="flex items-center">
-            <div
-              className="items-center justify-between hidden w-full lg:flex md:w-auto mr-12 space-x-6"
-              id="mobile-menu-2"
-            >
+            <div className="items-center justify-between  flex w-auto mr-12 space-x-6">
               <img src={Calender} alt="calender" className="w-5 h-5" />
               <img src={Message} alt="messgae" className="w-5 h-5" />
               <img src={Notifi} alt="notifications" className="w-5 h-5" />
             </div>
-            <div className="m-2">
+            <div className="m-2 hidden md:block">
               <p className="font-normal	text-base leading-5 text-right text-[#0D062D]">
                 Anima Agrawal
               </p>
@@ -119,23 +115,23 @@ const Navbar = () => {
           <div className="flex -space-x-3">
             <img
               className="w-10 h-10 object-cover border-2 border-white rounded-full dark:border-gray-800"
-              src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
-              alt=""
+              src="./img/user2.png"
+              alt="user"
             />
             <img
               className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
-              src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              alt=""
+              src="./img/user6.png"
+              alt="user"
             />
             <img
               className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
-              src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-              alt=""
+              src="./img/user1.png"
+              alt="user"
             />
             <img
               className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
-              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-              alt=""
+              src="./img/user3.png"
+              alt="user"
             />
             <a
               className="flex items-center justify-center w-10 h-10 text-xs font-medium text-[#D25B68] bg-[#F4D7DA] border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800"
@@ -148,28 +144,47 @@ const Navbar = () => {
       </div>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-8 pt-7">
         <div className=" flex items-center m-2 justify-start gap-4 h-full">
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-              <BiFilterAlt className="text-[#787486]" />
-            </div>
-            <select className="block w-full py-2 pl-10 pr-10 text-base font-medium text-[#787486] leading-6 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-              <option>Filter</option>
-              <option>Filter 2</option>
-              <option>Filter 3</option>
-            </select>
+          <div class="dropdown inline-block relative">
+            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+              <BiFilterAlt className="text-[#787486] mr-2" />
+              <span class="mr-1">Filter</span>
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
           </div>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-              <img src={Calenderdark} alt="Calenderdark" />
-            </div>
-            <select className="block w-full py-2 pl-10 pr-10 text-base font-medium text-[#787486] leading-6 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-              <option>Today</option>
-              <option>Today 2</option>
-              <option>Today 3</option>
-            </select>
+          <div class="dropdown inline-block relative">
+            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+              <img src={Calenderdark} alt="Calenderdark" className="mr-2" />
+              <span class="mr-1">Today</span>
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown inline-block relative md:hidden">
+            <button class="bg-white border border-gray-400 rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+              <img src={Profileuser} alt="Profileuser" className="mr-2" />
+              <span class="mr-1">Share</span>
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
+            </button>
           </div>
         </div>
-        <div className="flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start ">
+        <div className="md:flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start hidden ">
           <button
             type="button"
             className="text-[#787486] gap-3 bg-white border border-[#787486] focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 "

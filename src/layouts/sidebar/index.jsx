@@ -14,6 +14,7 @@ import AddSquare from "../../svg/addsquare.svg";
 import Lamp from "../../svg/lamp.svg";
 import MySvg from "../../svg/colorfilter.svg";
 import { RxDoubleArrowLeft } from "react-icons/rx";
+import { BsThreeDots } from "react-icons/bs";
 
 const Sidebar = () => {
   let isTabletMid = useMediaQuery({ query: "(max-width: 768px)" });
@@ -90,7 +91,7 @@ const Sidebar = () => {
             }`}
           >
             <img src={MySvg} width={24} height={24} alt="logo" />
-            <span className="whitespace-pre font-inter font-semibold text-[20px] leading-6 text-purple-900">
+            <span className="whitespace-pre font-inter font-semibold text-[20px] leading-6 text-[#0D062D]">
               Project M.
             </span>
           </div>
@@ -127,7 +128,7 @@ const Sidebar = () => {
         <div className="flex flex-col">
           <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 overflow-x-hidden">
             <li>
-              <NavLink to={"/"} className="link font-inter text-base leading-5">
+              <NavLink to={"/home"} className="link font-inter text-base leading-5">
                 <img src={Homelog} w="24px" h="24px" alt="home" />
                 Home
               </NavLink>
@@ -170,20 +171,23 @@ const Sidebar = () => {
             </li>
             {(open || isTabletMid) && (
               <div className=" py-5 border-t border-[#DBDBDB]">
-                <div className="flex items-center justify-between gap-2.5">
-                  <small className="capitalize pl-3 text-slate-500 inline-block mb-2 font-bold text-[12px]">
+                <div className="flex items-center justify-between mr-2">
+                  <small className="uppercase pl-3 text-slate-500 inline-block mb-2 font-bold text-[12px]">
                     my projects
                   </small>
                   <img src={AddSquare} w="24px" h="24px" alt="home" />
                 </div>
                 <div className="flex flex-col">
-                  <ul className="whitespace-pre px-2 py-5 flex flex-col font-medium">
+                  <ul className="whitespace-pre  py-5 flex flex-col font-medium">
                     <NavLink
-                      to={"/mobile_app"}
-                      className="w-full mb-1 py-3 px-2 flex flex-row items-center gap-5"
+                      to={"/"}
+                      className="w-full mb-1 py-3 px-2 flex flex-row items-center gap-5 justify-between"
                     >
-                      <p className="bg-[#7AC555] rounded-full w-[8px] h-[8px]"></p>
-                      <p className="text-[16px]"> Mobile App</p>
+                      <span className="w-full flex flex-row items-center gap-5">
+                        <p className="bg-[#7AC555] rounded-full w-[8px] h-[8px]"></p>
+                        <p className="text-[16px]"> Mobile App</p>
+                      </span>
+                      <BsThreeDots className="text-[#0D062D] text-[16px] font-extrabold	"/>
                     </NavLink>
                     <NavLink
                       to={"/website_redesign"}
