@@ -8,7 +8,7 @@
 - Vercel (for Deployment)
 
 ### Home Page:-
-![image](https://github.com/VishalBhuse/KanBan/assets/101569259/35e16a85-036f-455f-9066-8aa0e4c33e74)
+![image](https://github.com/VishalBhuse/KanBan/assets/101569259/ffb37e9d-e2b0-4afd-be59-3a3f4d9ed282)
 
 ### Responsive:-
 ![image](https://github.com/VishalBhuse/KanBan/assets/101569259/3678fafa-7a8b-4858-b5f1-9016a63b126a)
