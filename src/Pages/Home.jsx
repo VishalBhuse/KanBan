@@ -43,7 +43,7 @@ const Home = () => {
                   {(provided, snapshot) => (
                     <div {...provided.droppableProps} ref={provided.innerRef}>
                       <div
-                        className={`bg-[#F5F5F5] rounded-t-lg shadow-md h-[105vh]
+                        className={`bg-[#F5F5F5] rounded-t-lg shadow-md md:h-[105vh] h-auto
                         flex flex-col relative overflow-hidden pb-3 px-2 
                         ${snapshot.isDraggingOver && "bg-green-100"}`}
                       >

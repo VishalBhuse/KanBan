@@ -144,12 +144,12 @@ const Navbar = () => {
       </div>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto xs:p-2 md:px-8 pt-7">
         <div className=" flex items-center m-2 justify-start gap-4 h-full">
-          <div class="dropdown inline-block relative">
-            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+          <div className="dropdown inline-block relative">
+            <button className="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <BiFilterAlt className="text-[#787486] mr-2" />
-              <span class="mr-1">Filter</span>
+              <span className="mr-1">Filter</span>
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -157,12 +157,12 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div class="dropdown inline-block relative">
-            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+          <div className="dropdown inline-block relative">
+            <button className="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <img src={Calenderdark} alt="Calenderdark" className="mr-2" />
-              <span class="mr-1">Today</span>
+              <span className="mr-1">Today</span>
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -170,12 +170,12 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div class="dropdown inline-block relative md:hidden">
-            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+          <div className="dropdown inline-block relative md:hidden">
+            <button className="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <img src={Profileuser} alt="Profileuser" className="mr-2" />
-              <span class="mr-1">Share</span>
+              <span className="mr-1">Share</span>
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -185,10 +185,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="md:flex items-center m-2  gap-4 h-full lg:justify-end sm:justify-start hidden ">
-          <div class="dropdown inline-block relative ">
-            <button class="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
+          <div className="dropdown inline-block relative ">
+            <button className="bg-white border border-[#787486] rounded-md text-[16px] font-medium text-[#787486] py-2 px-4 inline-flex items-center">
               <img src={Profileuser} alt="Profileuser" className="mr-2" />
-              <span class="mr-1">Share</span>
+              <span className="mr-1">Share</span>
             </button>
           </div>
           <div className="border-l  border-[#787486] h-8"></div>
